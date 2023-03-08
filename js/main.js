@@ -6,7 +6,7 @@ let precioZapatillas = 6000
 function precio_Total(cantidad, prenda) {
 
         let subtotal = cantidad * prenda
-        alert(`El total a pagar es de ${subtotal} por ${cantidad} de prendas.`) 
+        alert(`El total a pagar es de ${subtotal} por ${cantidad} prendas.`) 
 }
 
 let nombre = prompt("Ingrese su nombre")
@@ -31,7 +31,6 @@ while(numero != 5) {
                      [4] Zapatillas
                      [5] para terminar su compra`));
                 }
-
                 if(numero == 2){
                     cantidad = parseInt(prompt("El precio de los buzos es de $4000. ¿Cuántos desea comprar?"))
                     precio_Total(cantidad, precioBuzos)
@@ -43,7 +42,6 @@ while(numero != 5) {
                     [4] Zapatillas
                     [5] para terminar su compra`));   
                }
-
                if(numero == 3){
                    cantidad = parseInt(prompt("El precio de los pantalones es de $3000. ¿Cuántos desea comprar?"))
                    precio_Total(cantidad, precioPantalones)
@@ -55,7 +53,6 @@ while(numero != 5) {
                    [4] Zapatillas
                    [5] para terminar su compra`));   
                }
-
                 if(numero == 4){
                    cantidad = parseInt(prompt("El precio de las zapatillas es de $6000. ¿Cuántas desea comprar?"))
                    precio_Total(cantidad, precioZapatillas)
