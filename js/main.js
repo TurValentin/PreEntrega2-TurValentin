@@ -19,7 +19,7 @@ let numero = parseInt(prompt(`Presione el número según su elección.
 [4] Zapatillas
 [5] para terminar su compra`));
 
-while(numero != 5) {
+while(numero != 4) {
                 if(numero == 1){                        
                      cantidad = parseInt(prompt("El precio de las remeras es de $2500. ¿Cuántas desea comprar?"))
                      precio_Total(cantidad, precioRemeras)
