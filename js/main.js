@@ -5,19 +5,25 @@ const prendas = [
     {nombre: "jean", precio: 4000},
     {nombre: "pantalon", precio: 3000},
     {nombre: "zapatilla", precio: 6000},
+    {nombre: "campera", precio: 5500},
 ];
 
 let carrito = []
+
+function seleccionCorrecta() {
+    while(seleccion != "si" && seleccion != "no"){
+        alert("Ingrese alguna de las dos opciones validas ( si ) o ( no )")
+        seleccion = prompt("¿Desea hacer alguna compra? ( si ) o ( no )")
+    }
+}
 
 let nombre = prompt("Ingrese su nombre")
 alert(`Bienvenido/a ${nombre}!`);
 
 let seleccion = prompt("¿Desea hacer alguna compra? Conteste con ( si ) o con ( no )")
 
-while(seleccion != "si" && seleccion != "no"){
-    alert("Ingrese alguna de las dos opciones validas (si o no)")
-    seleccion = prompt("¿Desea hacer alguna compra?")
-}
+seleccionCorrecta()
+
 
 if(seleccion == "si"){
     alert("A continuación nuestra indumentaria...")
@@ -38,10 +44,11 @@ while(seleccion != "no") {
     -jean-
     -pantalon-
     -zapatilla-
+    -campera-
     `)
     let precio = 0
 
-    if(prenda == "remera" || prenda == "camisa" || prenda == "buzo" || prenda == "jean" || prenda == "pantalon" || prenda == "zapatilla") {
+    if(prenda == "remera" || prenda == "camisa" || prenda == "buzo" || prenda == "jean" || prenda == "pantalon" || prenda == "zapatilla" || prenda == "campera") {
          switch(prenda){
             case "remera": 
             precio = 2500
@@ -61,6 +68,9 @@ while(seleccion != "no") {
             case "zapatilla": 
             precio = 6000
             break;
+            case "campera": 
+            precio = 5500
+            break;
             default:
             break;
          }
@@ -73,6 +83,10 @@ while(seleccion != "no") {
     }
 
     seleccion = prompt(`¿Desea seguir comprando? ( si ) o ( no )`)
+
+    seleccionCorrecta()
+    
+    
     
     while (seleccion === "no") {
         alert(`Gracias por la compra, Hasta pronto!`)
