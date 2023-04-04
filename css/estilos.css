@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "nunito" , sans-serif;
 }
 
 nav {
@@ -184,10 +185,6 @@ body{
     text-transform: uppercases;
     cursor: pointer;
 }
-
-
-
-
 
 .carrito-acciones-derecha{
     display: flex;
