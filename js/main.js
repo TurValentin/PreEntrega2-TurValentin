@@ -306,7 +306,6 @@ function actualizarBotonesAgregar () {
     
 
 let productosEnCarrito;
-
 let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 if (productosEnCarritoLS) {
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
@@ -329,10 +328,7 @@ function agregarAlCarrito(e) {
         productosAgregado.cantidad = 1;
         productosEnCarrito.push(productosAgregado);
     }
-
-    productosEnCarrito.push(productosAgregado);
-
-
+    
     actualizarNumerito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
@@ -344,4 +340,3 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
-
